@@ -1,0 +1,12 @@
+/**
+/ English Language File for Notify on Cron Failure Cron-Plugin
+**/
+
+title#:#Add User Pictures from Evento-Soap Interface
+description#:#Fetches the picture of a usr from a SOAP-Interface for use with the SEB-Plugin
+ws_url#:#SOAP Server URL
+ws_url_desc#:#URL of the SOAP Server
+ws_user#:#SOAP User
+ws_user_desc#:#Username to access the SOAP Interface
+ws_password#:#SOAP Password
+ws_password_desc#:#Password to access the SOAP Interface
