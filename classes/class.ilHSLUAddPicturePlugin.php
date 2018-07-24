@@ -67,7 +67,7 @@ class ilHSLUAddPicturePlugin extends ilEventHookPlugin {
 				);
 		
 		if ($soap_client->init()) {
-			$result = $soap_client->call('Login', array('parameters' => array('username' => $this->config->get('ws_user'), 'password' => $this->config->get('ws_username'))));
+			$result = $soap_client->call('Login', array('parameters' => array('username' => $this->config->get('ws_user'), 'password' => $this->config->get('ws_password'))));
 			if (isset($result->LoginResult) && $result->LoginResult != 'wrong credentials') {
 				$params['parameters']['token'] = $result->LoginResult;
 				$has_picture_result = $soap_client->call('HasPhoto', $params);
