@@ -10,3 +10,6 @@ ws_user#:#SOAP-Benutzer
 ws_user_desc#:#Benutzername zum Zugriff auf die SOAP-Schnittstelle
 ws_password#:#SOAP-Passwort
 ws_password_desc#:#Passwort zum Zugriff auf die SOAP-Schnittstelle
+saved_success#:#Die Änderungen wurden gespeichert
+no_changes#:#Keine Änderungen
+save_error#:#Beim Speichern ist ein Fehler aufgetreten

@@ -69,9 +69,10 @@ class ilHSLUAddPictureConfigGUI extends ilPluginConfigGUI {
 				'ws_password'
 				);
 		$ws_item->setInfo($this->pl->txt('ws_password_desc'));
+		$ws_item->setSkipSyntaxCheck(true);
 		$ws_item->setRequired(true);
 		$ws_item->setRetype(false);
-		$ws_item->setValue($this->config->get('ws_password'));
+		$ws_item->setValue($this->config->get('ws_password') == '' ? '' : '(__unchanged__)');
 		$form->addItem($ws_item);
 		
 		$form->addCommandButton('save', $this->DIC->language()->txt('save'));
@@ -87,16 +88,18 @@ class ilHSLUAddPictureConfigGUI extends ilPluginConfigGUI {
 		$this->pl = $this->getPluginObject();
 		$form = $this->initConfigurationForm();
 		if ($form->checkInput()) {
-			// ToDo validate
+			$form_input = [];
 
 			$form_input['ws_url'] = $form->getInput('ws_url');
 		    $form_input['ws_user'] = $form->getInput('ws_user');
-		    $form_input['ws_password'] = $form->getInput('ws_password');	    
+		    $form_input['ws_password'] = $form->getInput('ws_password') == '(__unchanged__)' ? $this->config->get('ws_password') : $form->getInput('ws_password');	    
 		    
-		    if ($this->config->saveConf($form_input) <= 0) {
-				ilUtil::sendFailure($this->pl->txt("save_error"), true);
+		    if ($r = $this->config->saveConf($form_input) > 0) {
+		    	ilUtil::sendSuccess($this->pl->txt('saved_success'), true);
+		    } else if ($r == 0) {
+		    	ilUtil::sendInfo($this->pl->txt('no_changes'), true);
 			} else {	
-				ilUtil::sendSuccess($this->pl->txt("saved_success"), true);							
+				ilUtil::sendFailure($this->pl->txt('save_error'), true);
 			}
 			$this->configure();
 		} else {

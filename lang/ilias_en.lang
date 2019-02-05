@@ -10,3 +10,6 @@ ws_user#:#SOAP User
 ws_user_desc#:#Username to access the SOAP Interface
 ws_password#:#SOAP Password
 ws_password_desc#:#Password to access the SOAP Interface
+saved_success#:#Your changes have been saved
+no_changes#:#Nothing was changed
+save_error#:#We couldn't save your changes
