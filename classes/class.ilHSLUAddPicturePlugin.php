@@ -51,6 +51,7 @@ class ilHSLUAddPicturePlugin extends ilEventHookPlugin {
     			$tmp_file = ilUtil::ilTempnam();
     			imagepng(imagecreatefromstring($picture), $tmp_file, 0);
     			ilObjUser::_uploadPersonalPicture($tmp_file, $this->user->getId());
+    			unlink($tmp_file);
     		}
     	}
 	}
