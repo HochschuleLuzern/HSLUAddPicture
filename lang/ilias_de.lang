@@ -1,15 +1,15 @@
 /**
 / German Language File for Notify on Cron Failure Cron-Plugin
 **/
-
-title#:#Bilder der Benutzer über die Evento-SOAP-Schnittstelle holen
+<!-- language file start -->
 description#:#Holt sich jeweils das Nutzerbild über die HSLU-SOAP-Schnittstelle zu Evento, wenn sich ein Nutzer anmeldet und noch kein Bild hat.
+no_changes#:#Keine Änderungen
+save_error#:#Beim Speichern ist ein Fehler aufgetreten
+saved_success#:#Die Änderungen wurden gespeichert
+title#:#Bilder der Benutzer über die Evento-SOAP-Schnittstelle holen
+ws_password#:#SOAP-Passwort
+ws_password_desc#:#Passwort zum Zugriff auf die SOAP-Schnittstelle
 ws_url#:#SOAP-Server URL
 ws_url_desc#:#URL des SOAP-Servers
 ws_user#:#SOAP-Benutzer
 ws_user_desc#:#Benutzername zum Zugriff auf die SOAP-Schnittstelle
-ws_password#:#SOAP-Passwort
-ws_password_desc#:#Passwort zum Zugriff auf die SOAP-Schnittstelle
-saved_success#:#Die Änderungen wurden gespeichert
-no_changes#:#Keine Änderungen
-save_error#:#Beim Speichern ist ein Fehler aufgetreten
